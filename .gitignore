@@ -1,0 +1,12 @@
+/.env
+/bin
+/certifi
+/certifi-2021.10.8.dist-info
+/charset_normalizer
+/charset_normalizer-2.0.12.dist-info
+/idna
+/idna-3.3.dist-info
+/requests
+/requests-2.27.1.dist-info
+/urllib3
+/urllib3-1.26.9.dist-info

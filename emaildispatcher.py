@@ -30,7 +30,7 @@ def sendemail(recipients, sender, links):
 	BODY_HTML = f"""<html>
 	<head></head>
 	<body>
-		<p>Hi Janet,<br>
+		<p>Hi Janet,<br><br>
 			This is an automated email containing youtube links for this coming weeks sunday services ({sunday}).<br><br>
 			<b>10AM service - <a href='{links[0]}'>{links[0]}</a><br>
 			5PM service - <a href='{links[1]}'>{links[1]}</a><br><br></b>

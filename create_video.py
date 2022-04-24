@@ -13,6 +13,8 @@ def nextsunday():
 	# Finds date of next sunday as a datetime object. Also returns wether or not daylights savings applies
 
 	daylightsavings = time.localtime().tm_isdst # TODO: Checks CURRENT daylight savings NOT following sunday's DST. Will break 2x per year.
+	
+	daylightsavings = 1 # hacky fix for BST
 
 	today = datetime.datetime.today()
 	sunday = today + datetime.timedelta( (6-today.weekday()) % 7 )
@@ -72,7 +74,7 @@ def create10AMservice(access_token):
 			"enableAutoStop": False
 		},
 		"status": {
-			"privacyStatus": "unlisted",
+			"privacyStatus": "public",
 			"selfDeclaredMadeForKids": False,
 		}
 	}

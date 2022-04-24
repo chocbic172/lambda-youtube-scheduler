@@ -1,4 +1,5 @@
 import os
+import json
 
 import emaildispatcher
 import requests
@@ -9,9 +10,9 @@ def lambda_handler(event, context):
 
 	# Generate request to gain a new access key for youtube API
 	params = {
-		'client_id': os.environ['client_id'],
-		'client_secret': os.environ['client_secret'],
-		'refresh_token': os.environ['REFRESH_TOKEN'],
+		'client_id': os.environ['google_client_id'],
+		'client_secret': os.environ['google_client_secret'],
+		'refresh_token': os.environ['google_refresh_token'],
 		'grant_type': 'refresh_token',
 	}
 
@@ -24,6 +25,6 @@ def lambda_handler(event, context):
 	pmlink = f'https://youtu.be/{create_video.create5PMservice(access_token)}'
 
 	# Email the generated links to admin team
-	emaildispatcher.sendemail(os.environ["email_recipient_list"], os.environ["email_sender"], [amlink, pmlink])
+	emaildispatcher.sendemail(json.loads(os.environ["email_recipient_list"]), os.environ["email_sender"], [amlink, pmlink])
 
 	return 0

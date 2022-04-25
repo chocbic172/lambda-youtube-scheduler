@@ -128,7 +128,7 @@ def create5PMservice(access_token):
 			"enableAutoStop": False
 		},
 		"status": {
-			"privacyStatus": "unlisted",
+			"privacyStatus": "public",
 			"selfDeclaredMadeForKids": False,
 		}
 	}

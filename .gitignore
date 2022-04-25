@@ -10,3 +10,4 @@
 /requests-2.27.1.dist-info
 /urllib3
 /urllib3-1.26.9.dist-info
+.gitignore
